@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+        - name: print hostname
+        shell: hostname >> tempfile.txt
+
+        -name: cat resolv.conf
+        shell: cat "{{resolv.conf}}" >> tempfile.txt
+
+        -name: cat tempfile.txt
+        shell: cat "{{tempfile.txt}}"
+        
+

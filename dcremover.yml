@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: Remove Domain controller
+    lineinfile: dest=/etc/resolv.conf
+              line="nameserver 10.221.128.22"
+              state=absent

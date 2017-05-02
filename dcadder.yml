@@ -1,0 +1,9 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: Add Domain controller
+    lineinfile: dest=/etc/resolv.conf
+              line="nameserver 10.221.128.23"
+              state=present
+

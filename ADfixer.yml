@@ -1,0 +1,25 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+
+        - name: configure AD realm
+          command: /opt/quest/bin/vastool arg1 arg2 arg3 arg4
+          args:
+          configure
+          realm
+          prscoad.com 
+          pwpaws-dc01.prscoad.com
+
+       # - name: Check YUM repository
+       #   command: yum info "{{ reaper_ui_package }}"
+    #    - name: print hostname
+    #    shell: hostname >> tempfile.txt
+
+    #    -name: cat resolv.conf
+    #    shell: cat "{{resolv.conf}}" >> tempfile.txt
+
+    #    -name: cat tempfile.txt
+    #    shell: cat "{{tempfile.txt}}"
+        
+
